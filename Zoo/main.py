@@ -1,4 +1,6 @@
 from animal import Animal
+from elephant import Elephant
+
 
 def main():
     ani1 = Animal()
@@ -18,6 +20,10 @@ def main():
     print(ani2.move("South"))
     print(ani2.eat("banana"))
     #print(f"my energy level is {ani2.energy}")
+
+    ele = Elephant("Nelly", 5, "Grey", 2.3)
+    print(ele.move("North"))
+    print(ele.spray_water())
 
 
 if __name__ == '__main__':
