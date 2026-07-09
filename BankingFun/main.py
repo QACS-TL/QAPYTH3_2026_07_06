@@ -1,4 +1,5 @@
 import account
+from current_account import CurrentAccount
 
 def main():
     acc1 = account.Account( "88888888", "J Jones")
@@ -13,9 +14,17 @@ def main():
     print(acc1)
     print(acc2)
 
+    cacc = CurrentAccount("565656565", "Jones", 100, 750)
+    cacc.withdraw(851)
+    print(cacc)
+
+
     accounts = {}
     accounts[acc1.account_id] = acc1
     accounts[acc2.account_id] = acc2
+    accounts[cacc.account_id] = cacc
+
+    acc2.balance = -1
 
     for acc_id in accounts:
         accounts[acc_id].deposit(40)
